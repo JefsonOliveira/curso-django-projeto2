@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # os apps criados devem ser adicionados.
+    'recipes',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,10 @@ ROOT_URLCONF = 'projeto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # novas pastas devem ser adicionadas aqui para poder serem percorridas.
+            BASE_DIR / 'cbase_templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
